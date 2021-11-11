@@ -2,11 +2,12 @@
 
 @foreach (var item in Model)
 {
+<div class="photo-index-card">
     <h3>"@item.Title"</h3>
 
-    if (item.PhotoFile != null)
+    @if (item.PhotoFile != null)
     {
-        <img width="200" src="@Url.Action("GetImage", "Photo", new { id = item.PhotoID })" />
+    <img class="photo-index-card-img" src="@Url.Action("GetImage", "Photo", new { id = item.PhotoID })" />
     }
 
     <p>
@@ -20,4 +21,5 @@
     </p>
 
     @Html.ActionLink("Display", "Display", new { id = item.PhotoID })
+</div>
 }

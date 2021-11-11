@@ -1,0 +1,62 @@
+﻿body {
+    background: #7f9aae;
+    background-image: url('BackgroundGradient.jpg');
+    background-repeat: repeat-x;
+    font-family: segoe ui, verdana, arial, sans-serif;
+    font-weight: 300;
+    color: #FBFBFB;
+}
+.site-page-title {
+    float: left;
+    width: 600px;
+}
+.clear-floats {
+    clear: both;
+}
+
+#topmenu {
+    background-color: #808080;
+    height: 45px;
+}
+#topmenu {
+    background-color: #808080;
+    height: 45px;
+    border-radius: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+nav li {
+    display: inline-block;
+    width: 10%;
+    padding: 5px 10px;
+    background-color: #000;
+    border: 1px solid #000;
+    text-align: center;
+    color: #fff;
+}
+
+    nav li:hover {
+        background-color: #fff;
+        color: #000;
+    }
+.photo-index-card {
+    background-color: #eeeeee;
+    border-color: #538345;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    color: #333333;
+    padding: 15px;
+    margin: 5px;
+    height: 500px;
+    width: 280px;
+    float: left;
+}
+.photo-index-card-img {
+    width: 250px;
+    max-height: 320px;
+}
