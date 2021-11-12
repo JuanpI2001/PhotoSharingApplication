@@ -8,10 +8,13 @@ using PhotoSharingApplication.Models;
 
 namespace PhotoSharingApplication.Controllers
 {
-    [ValueReporter]
-    public class PhotoController : Controller    
+    
+    
+     [ValueReporter]
+    [HandleError(View = "Error")]
+    public class PhotoController : Controller
     {
- 
+
         private PhotoSharingContext context = new PhotoSharingContext();
         // GET: Photo
         public ActionResult Index()
@@ -31,7 +34,7 @@ namespace PhotoSharingApplication.Controllers
             {
                 photos = (
                 from p in context.Photos
-                orderby p.CreatedDate descending 
+                orderby p.CreatedDate descending
                 select p).Take(number).ToList();
             }
             return PartialView("_PhotoGallery", photos);
@@ -90,7 +93,7 @@ namespace PhotoSharingApplication.Controllers
             }
             return View("Delete", photo);
         }
-        
+
         [HttpPost]
         [ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
@@ -115,5 +118,11 @@ namespace PhotoSharingApplication.Controllers
                 return null;
             }
         }
+        
+        public ActionResult SlideShow()
+        {
+            throw new NotImplementedException("The SlideShow action is not yet ready");
+        }
+            
     }
 }
